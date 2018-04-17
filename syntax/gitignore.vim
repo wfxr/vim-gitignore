@@ -7,10 +7,10 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn match gitignoreDirectory ".*/$"
+syn match gitignoreDirectory ".*/\s*$"
 hi gitignoreDirectory cterm=bold ctermfg=DarkBlue
 
-syn match gitignoreComment "#.*$"
+syn match gitignoreComment "\s*#.*$"
 hi def link gitignoreComment Comment
 
 let b:current_syntax = 'gitignore'
